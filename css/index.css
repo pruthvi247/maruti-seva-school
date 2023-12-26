@@ -278,7 +278,7 @@ header {
   padding-bottom: 0.5em;
   border: 1px solid var(--main-border-color);
   background-color: var(--main-background-color);
-  background-color: lightcoral;
+  /* background-color: lightcoral; */
   display: flex;
   justify-content: space-between;
   align-items: absolute;
@@ -287,6 +287,15 @@ header {
   left: 0;
   width: 100%;
   margin-bottom: 2rem;
+  border: 1px solid var(--main-border-color);
+  background-color: var(--main-bg-color);
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+  /* -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px; */
 }
 /* header > * {
   flex-grow: 1;
@@ -301,7 +310,7 @@ header a {
 }
 .menu {
   display: flex;
-  background-color: green;
+  /* background-color: green; */
   justify-content: space-between;
   align-items: center;
   /* max-width: 250px; */
@@ -355,7 +364,7 @@ header a {
     cursor: pointer;
     display: flex;
     justify-content: flex-end;
-    align-items: baseline;
+    align-items: cen;
     padding: 30px 20px 30px 0;
     position: relative;
     user-select: none;
@@ -393,9 +402,7 @@ header a {
     grid-area: nav;
     max-width: unset;
     max-height: 0;
-    /* transition: max-height 0.2s ease-out; */
-    transition: 50px 0.2s ease-out;
-    overflow: hidden;
+    transition: max-height 0.2s ease-out;
     margin: 0;
     padding: 0;
     background-color: #fff;
@@ -413,7 +420,7 @@ header a {
   }
 
   .menu-btn:checked ~ .menu {
-    max-height: 240px;
+    max-height: 240vh;
   }
 
   .menu-btn:checked ~ .menu-icon .navicon {
