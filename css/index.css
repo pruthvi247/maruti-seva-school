@@ -409,32 +409,51 @@ header a {
 }
 /* ---------------scroll driven--------------- */
 
-@keyframes scroll-progress-anim {
-  0% {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  /* from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  } */
-  /* from {
-    transform: scaleX(0);
-  }
-  to {
-    transform: scaleX(1);
-  } */
-}
 .home-page-section img {
   animation: appear linear;
   animation-range: entry 0% entry 150%;
   animation-timeline: view();
+}
+.hero-section-content {
+  animation: appear linear;
+  animation-range: entry 0% entry 150%;
+  animation-timeline: view();
+}
+/* santa */
+.progress {
+  position: fixed;
+  bottom: calc(100vh - 100%);
+  left: 0;
+  width: calc(100% - clamp(5rem, 200px, 10vw));
+  height: 0.5rem;
+  background: lightblue;
+  transform-origin: 0 50%;
+  animation: scaleProgress linear;
+  animation-timeline: scroll(root);
+}
+@keyframes scaleProgress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+.santa {
+  position: fixed;
+  bottom: calc(100vh - 100%);
+  left: 0;
+  width: clamp(5rem, 200px, 10vw);
+  animation: slide linear;
+  animation-timeline: scroll(root);
+}
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(100vw - 100%));
+  }
 }
 /* -------------------------------- */
 /* ---------- footer ---------*/
