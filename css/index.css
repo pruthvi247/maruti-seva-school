@@ -391,8 +391,51 @@ header a {
   .home-page-section {
     min-height: 100vh;
   }
+  /* Animation */
+  @keyframes appear {
+    from {
+      opacity: 0.2;
+      scale: 0.8;
+      translate: 0 10%;
+      background-color: yellow;
+    }
+  }
+  .home-page-section {
+    animation: animate-in ease-in both;
+    /* animation-timeline: view(); */
+    /* animation-range: entry 25% cover calc(50% - 10vh); */
+    animation-timeline: scroll();
+  }
 }
+/* ---------------scroll driven--------------- */
 
+@keyframes scroll-progress-anim {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  /* from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  } */
+  /* from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  } */
+}
+.home-page-section img {
+  animation: appear linear;
+  animation-range: entry 0% entry 150%;
+  animation-timeline: view();
+}
 /* -------------------------------- */
 /* ---------- footer ---------*/
 /* -------------------------------- */
