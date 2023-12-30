@@ -52,7 +52,7 @@ body {
   font-family: var(--ff-body);
   font-size: var(--fs-400);
   color: var(--clr-txt-body);
-  background-color: var(--clr-background);
+  /* background-color: var(--clr-background); */
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   padding: 2rem;
@@ -132,27 +132,27 @@ body {
   /* background-image: url(../assets/images/geo-shapes-background.svg); */
   /* background-image: url(../assets/images/checks-geometry.png); */
   background-size: 100%;
+  background-color: var(--clr-background);
 }
 header {
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+  /* padding-top: 0.5em;
+  padding-bottom: 0.5em; 
   border: 1px solid var(--main-border-color);
   background-color: var(--clr-gray-dark);
-  /* background-color: lightcoral; */
+  margin-bottom: 2rem;
+  background-color: lightcoral; */
+  background-color: var(--clr-background);
   display: flex;
-
   justify-content: space-between;
-  align-items: absolute;
+  /* align-items: absolute; */
   position: sticky;
   z-index: 99;
   top: 0;
   left: 0;
   width: 100%;
-  margin-bottom: 2rem;
-  border: 1px solid var(--main-border-color);
   /* background-color: var(--main-bg-color); */
-  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
-  /* -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  /* box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
   -webkit-border-radius: 5px;
@@ -326,8 +326,138 @@ header a {
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
+/* new-hero-section ------------------ */
+.home-page-hero-section {
+  display: grid;
+  grid-template-columns: 45% 50%;
+  place-items: center;
+  gap: 50px;
+  /* background: rgb(67, 69, 112);
+  background: radial-gradient(
+    circle,
+    rgba(67, 69, 112, 1) 3%,
+    rgba(35, 36, 57, 1) 60%
+  ); */
+  overflow: hidden;
+  padding: 70px 80px;
+}
+.home-page-hero-description {
+  color: #fff;
+  padding: 0 50px;
+}
 
-/* phot section ------------------ */
+.home-page-hero-description > h1 {
+  font-family: "Tilt Neon", sans-serif;
+  font-size: clamp(2.3rem, 5vw, 4rem);
+  line-height: 1;
+  margin-bottom: 30px;
+}
+.home-page-hero-gradient-text {
+  font-family: "Tilt Neon", sans-serif;
+  background-image: linear-gradient(
+    90deg,
+    rgb(118, 167, 63) 0%,
+    rgb(51, 143, 118) 40%,
+    rgb(55, 141, 167) 50%,
+    rgb(117, 152, 242) 70%,
+    rgb(144, 118, 236) 100%
+  );
+  color: transparent;
+  background-size: contain;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.home-page-hero-description > p {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  color: #000;
+}
+.home-page-hero-users-color-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.home-page-hero-item {
+  max-width: 200px;
+  aspect-ratio: 1/1;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5),
+    inset 0px 2px 2px rgba(255, 255, 255, 0.2);
+  animation: fadeIn 0.5s linear 1 forwards;
+  animation-delay: calc(0.2s * var(--i));
+  opacity: 0;
+}
+
+.home-page-hero-item:nth-child(1) {
+  background-color: #67d7e1;
+  border-radius: 50% 50% 0 50%;
+}
+
+.home-page-hero-item:nth-child(2) {
+  border-radius: 50% 50% 0 0;
+}
+
+.home-page-hero-item:nth-child(3) {
+  background-color: #6cc164;
+  border-radius: 50%;
+}
+
+.home-page-hero-item:nth-child(4) {
+  border-radius: 0 0 0 50%;
+}
+
+.home-page-hero-item:nth-child(5) {
+  border-radius: 0 50% 50% 0;
+}
+
+.home-page-hero-item:nth-child(6) {
+  background-color: #8071a8;
+  border-radius: 0 50% 50% 50%;
+}
+
+.home-page-hero-item:nth-child(7) {
+  border-radius: 50% 50% 0 50%;
+}
+
+.home-page-hero-item:nth-child(8) {
+  background-color: #fe7519;
+  border-radius: 50% 0 0 50%;
+}
+
+.home-page-hero-item:nth-child(9) {
+  background-color: #f5bec3;
+  border-radius: 0 50% 50% 0;
+}
+
+.home-page-hero-item:nth-child(10) {
+  border-radius: 50%;
+}
+
+.home-page-hero-item:nth-child(11) {
+  background-color: #fcd659;
+  border-radius: 50% 0 50% 50%;
+}
+
+.home-page-hero-item:nth-child(12) {
+  border-radius: 50% 0 0 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* old-hero-section ------------------ */
 .home-page-main {
   display: flex;
   flex-direction: column;

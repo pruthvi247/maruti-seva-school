@@ -38,3 +38,4 @@ https://www.shapedivider.app/
 - [mozilla blog michelle barker](https://developer.mozilla.org/en-US/blog/scroll-progress-animations-in-css/)
 - [text highlight](https://codepen.io/jlengstorf/pen/bGzBwRm)
 - [infinite-scroll](https://codepen.io/t_afif/pen/jOXRGGx)
+- [hero-section-grid](https://codepen.io/ecemgo/pen/GRzpEpB)
