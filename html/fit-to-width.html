@@ -1,0 +1,186 @@
+<style>
+  /* The numbers reference the corresponding explanations from the article text. */
+  /* 1 */
+  @supports (animation-range: entry-crossing) {
+    .fit-to-width {
+      font-size: 13rem;
+      /* 2 */
+      overflow: hidden;
+      /* 3 */
+
+      scroll-snap-type: x mandatory;
+      /* 4 */
+
+      &>* {
+        inline-size: max-content;
+        /* 5 */
+        line-height: 1;
+        /* 6 */
+        transform-origin: 0 0;
+        /* 7 */
+
+        animation: apply-text-ratio linear;
+        /* 8 */
+        animation-timeline: view(inline);
+        /* 9 */
+        animation-range: entry-crossing;
+        /* 10 */
+
+        display: block;
+        /* 11 */
+        scroll-snap-align: start;
+        /* 12 */
+        contain: layout;
+        /* 13 */
+      }
+    }
+  }
+
+  /* 14 */
+  @keyframes apply-text-ratio {
+    from {
+      transform: scale(0);
+      /* 15 */
+      margin-block-end: -1lh;
+      /* 16 */
+    }
+  }
+
+  /* Experimenting with making the example sticky */
+  @supports (animation-range: entry-crossing) {
+    figure[style*='--sticky:'] {
+      position: var(--initial-at-small, sticky);
+      top: 0;
+      z-index: 2;
+
+      --height: 550px;
+      --reduce-to: 0.35;
+      --distance: 0px;
+      --animation-range:
+        entry 100cqh entry calc(100cqh + var(--distance));
+
+      transform-origin: 0 0;
+      animation: var(--initial-at-small, linear shrink-figure both);
+      animation-timeline: view();
+      animation-range: var(--animation-range);
+
+      @media (prefers-reduced-motion: no-preference) {
+        --distance: calc(var(--height) * (1 - var(--reduce-to)));
+      }
+    }
+  }
+
+  @keyframes shrink-figure {
+    from {
+      transform: translateY(0px) translateX(0px) scale(1);
+    }
+
+    to {
+      transform: translateY(1rem) translateX(calc(100% + var(--viewport-padding))) scale(var(--reduce-to));
+      resize: none;
+      width: 100%;
+    }
+  }
+
+  /* FIXME: allow passing dimensions to the partial. */
+  video.Figure-Screenshot {
+    height: 547px;
+  }
+</style>
+
+<p class="Summary p-summary" data-fletter="W">What if&nbsp;I&nbsp;will tell you how we&nbsp;could solve fit-to-width
+  text with pure CSS without any hardcoded parameters? Curiously, scroll-driven animations will allow
+  us&nbsp;to&nbsp;do&nbsp;just that! Join me&nbsp;as&nbsp;I&nbsp;continue exploring the experimental implementations
+  of&nbsp;the latest specs.</p>
+<section>
+  <div class="content">
+    <h2>Section 2</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime totam cupiditate atque commodi cumque rerum,
+      tempore repellat quia obcaecati minus mollitia quasi quos labore magnam exercitationem expedita neque laboriosam
+      voluptatum?</p>
+  </div>
+</section>
+<section>
+  <div class="content">
+    <h2>Section 3</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime totam cupiditate atque commodi cumque rerum,
+      tempore repellat quia obcaecati minus mollitia quasi quos labore magnam exercitationem expedita neque laboriosam
+      voluptatum?</p>
+  </div>
+</section>
+<p class="fit-to-width" contentEditable>
+  <span>What if I will tell you</span>
+  <span>how we could use</span>
+  <em>scroll-driven animations</em>
+  <strong>to solve</strong>
+  <span>fit-to-width text?</span>
+</p>
+<section>
+  <div class="content">
+    <h1>Hello</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A officiis, atque laborum corporis tenetur iste vel
+      incidunt, consequatur magni velit impedit quia, unde quisquam reiciendis. Eius autem odio itaque. Eos!</p>
+  </div>
+</section>
+<section>
+  <div class="content">
+    <h2>Section 2</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime totam cupiditate atque commodi cumque rerum,
+      tempore repellat quia obcaecati minus mollitia quasi quos labore magnam exercitationem expedita neque laboriosam
+      voluptatum?</p>
+  </div>
+</section>
+<section>
+  <div class="content">
+    <h2>Section 3</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime totam cupiditate atque commodi cumque rerum,
+      tempore repellat quia obcaecati minus mollitia quasi quos labore magnam exercitationem expedita neque laboriosam
+      voluptatum?</p>
+  </div>
+</section>
+<section>
+  <div class="content">
+    <h1>Hello</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A officiis, atque laborum corporis tenetur iste vel
+      incidunt, consequatur magni velit impedit quia, unde quisquam reiciendis. Eius autem odio itaque. Eos!</p>
+  </div>
+</section>
+<section>
+  <div class="content">
+    <h2>Section 2</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime totam cupiditate atque commodi cumque rerum,
+      tempore repellat quia obcaecati minus mollitia quasi quos labore magnam exercitationem expedita neque laboriosam
+      voluptatum?</p>
+  </div>
+</section>
+<section>
+  <div class="content">
+    <h2>Section 3</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime totam cupiditate atque commodi cumque rerum,
+      tempore repellat quia obcaecati minus mollitia quasi quos labore magnam exercitationem expedita neque laboriosam
+      voluptatum?</p>
+  </div>
+</section>
+<section>
+  <div class="content">
+    <h1>Hello</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A officiis, atque laborum corporis tenetur iste vel
+      incidunt, consequatur magni velit impedit quia, unde quisquam reiciendis. Eius autem odio itaque. Eos!</p>
+  </div>
+</section>
+<section>
+  <div class="content">
+    <h2>Section 2</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime totam cupiditate atque commodi cumque rerum,
+      tempore repellat quia obcaecati minus mollitia quasi quos labore magnam exercitationem expedita neque laboriosam
+      voluptatum?</p>
+  </div>
+</section>
+<section>
+  <div class="content">
+    <h2>Section 3</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime totam cupiditate atque commodi cumque rerum,
+      tempore repellat quia obcaecati minus mollitia quasi quos labore magnam exercitationem expedita neque laboriosam
+      voluptatum?</p>
+  </div>
+</section>

@@ -1,0 +1,95 @@
+!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Project - Home</title>
+  <!-- <link rel="stylesheet" href="css/styles.css"> -->
+  <!-- <link rel="stylesheet" href="./css/index.css"> -->
+  <!-- <link rel="stylesheet" href="./css/styles.css"> -->
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 100%;
+      min-height: 300vh;
+      margin: 0;
+      background: linear-gradient(to bottom, #2d2a82, lightblue);
+      background-size: 100% 300vh;
+    }
+
+    .progress {
+      position: fixed;
+      top: 3rem;
+      left: 3rem;
+      width: 3rem;
+      height: auto;
+      fill: currentColor;
+      z-index: 1;
+      offset-path: path('M.5 122.7s24.7-275 276.9 0c327.1 356.7 266.1-330.3 548-33.3 256.9 270.7 271.1 0 271.1 0');
+      animation: move auto linear;
+      animation-timeline: scroll(root);
+    }
+
+    .cloud {
+      width: 12vw;
+      height: auto;
+      position: absolute;
+      top: 5vh;
+      left: 60vw;
+      fill: rgb(255 255 255 / 0.5);
+    }
+
+    .cloud:nth-child(2n) {
+      top: 100vh;
+      left: 15vw;
+    }
+
+    .cloud:nth-child(3n) {
+      top: 160vh;
+      left: 70vw;
+    }
+
+    @keyframes move {
+      0% {
+        offset-distance: 0%;
+      }
+
+      100% {
+        offset-distance: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <svg viewBox="0 0 640 512" width="100" title="fighter-jet" class="progress">
+    <path
+      d="M544 224l-128-16-48-16h-24L227.158 44h39.509C278.333 44 288 41.375 288 38s-9.667-6-21.333-6H152v12h16v164h-48l-66.667-80H18.667L8 138.667V208h8v16h48v2.666l-64 8v42.667l64 8V288H16v16H8v69.333L18.667 384h34.667L120 304h48v164h-16v12h114.667c11.667 0 21.333-2.625 21.333-6s-9.667-6-21.333-6h-39.509L344 320h24l48-16 128-16c96-21.333 96-26.583 96-32 0-5.417 0-10.667-96-32z" />
+  </svg>
+
+  <svg viewBox="0 0 640 512" width="0" height="0" title="cloud">
+    <defs>
+      <path id="cloud"
+        d="M537.6 226.6c4.1-10.7 6.4-22.4 6.4-34.6 0-53-43-96-96-96-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32c-88.4 0-160 71.6-160 160 0 2.7.1 5.4.2 8.1C40.2 219.8 0 273.2 0 336c0 79.5 64.5 144 144 144h368c70.7 0 128-57.3 128-128 0-61.9-44-113.6-102.4-125.4z" />
+    </defs>
+  </svg>
+
+  <svg viewBox="0 0 640 512" width="100" title="cloud" class="cloud">
+    <use href="#cloud"></use>
+  </svg>
+
+  <svg viewBox="0 0 640 512" width="100" title="cloud" class="cloud">
+    <use href="#cloud"></use>
+  </svg>
+
+  <svg viewBox="0 0 640 512" width="100" title="cloud" class="cloud">
+    <use href="#cloud"></use>
+  </svg>
+
+</body>
+
+</html>
