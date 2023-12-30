@@ -34,3 +34,5 @@ https://www.shapedivider.app/
 - [underlines- photobackground](https://michellebarker.co.uk/#about)
 - [footer animation on scroll](https://codepen.io/michellebarker/full/mdQEjJp)
 - [prallax on scroll](https://codepen.io/keithclark/pen/ndEygj)
+- [timeline scroll](https://codepen.io/utilitybend/pen/dyQmQYy)
+- [mozilla blog michelle barker](https://developer.mozilla.org/en-US/blog/scroll-progress-animations-in-css/)
