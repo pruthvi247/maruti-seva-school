@@ -36,3 +36,5 @@ https://www.shapedivider.app/
 - [prallax on scroll](https://codepen.io/keithclark/pen/ndEygj)
 - [timeline scroll](https://codepen.io/utilitybend/pen/dyQmQYy)
 - [mozilla blog michelle barker](https://developer.mozilla.org/en-US/blog/scroll-progress-animations-in-css/)
+- [text highlight](https://codepen.io/jlengstorf/pen/bGzBwRm)
+- [infinite-scroll](https://codepen.io/t_afif/pen/jOXRGGx)

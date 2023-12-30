@@ -137,7 +137,7 @@ header {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
   border: 1px solid var(--main-border-color);
-  background-color: var(--main-background-color);
+  background-color: var(--clr-gray-dark);
   /* background-color: lightcoral; */
   display: flex;
 
@@ -468,7 +468,7 @@ body {
   width: 100%;
   min-height: 300vh;
   margin: 0;
-  background: linear-gradient(to bottom, #2d2a82, lightblue);
+  /* background: linear-gradient(to bottom, #2d2a82, lightblue); */
   background-size: 100% 300vh;
 }
 
@@ -513,6 +513,28 @@ body {
   100% {
     offset-distance: 100%;
   }
+}
+/* text highlight */
+html {
+  color: oklch(0.2 0.19 84.89 / 1);
+}
+@keyframes highlight {
+  to {
+    background-position: 0;
+  }
+}
+mark {
+  animation: highlight linear forwards;
+  animation-timeline: view(80% 20%);
+  background: linear-gradient(
+    to right,
+    oklch(0.86 0.19 84.89 / 1) 50%,
+    oklch(0.86 0.19 84.89 / 0) 50%
+  );
+  background-position: 100%;
+  background-size: 200% 100%;
+  border-radius: 0.125rem;
+  padding-inline: 0.125rem;
 }
 /* -------------------------------- */
 /* ---------- footer ---------*/
