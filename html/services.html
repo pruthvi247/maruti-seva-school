@@ -10,7 +10,44 @@
 <body>
   <div>
     <p>Services Page scroll animation</p>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="service-item">
+              <div class="icon">
+                <i class="fa fa-desktop"></i>
+              </div>
+              <h4>Web Design</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, dolorum.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-item">
+              <div class="icon">
+                <i class="fa fa-gears"></i>
+              </div>
+              <h4>Web Development</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, dolorum.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-item">
+              <div class="icon">
+                <i class="fa fa-pie-chart"></i>
+              </div>
+              <h4>Marketing</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, dolorum.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
+  <!-- <iframe src="../components/footer.html"></iframe> -->
+  <iframe src="../components/footer.html" loading="lazy"
+    onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+
 </body>
 
 </html>
