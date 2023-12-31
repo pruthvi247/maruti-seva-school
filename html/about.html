@@ -12,10 +12,14 @@
     rel="stylesheet">
   <!-- my css -->
   <link rel="stylesheet" href="../css/about-styles.css">
+  <link rel="stylesheet" href="../components/header/header.css">
+  <link rel="stylesheet" href="../components/footer/footer.css">
   <title>FEM grid</title>
 </head>
 
 <body>
+  <iframe src="../components/header/header.html"
+    onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
   <main class="testimonial-grid">
     <article class="testimonial grid-col-span-2 flow bg-primary-400 quote text-neutral-100">
       <div class="flex">
@@ -120,7 +124,8 @@
       </p>
     </article>
   </main>
-
+  <iframe src="../components/footer/footer.html"
+    onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
 </body>
 
 </html>

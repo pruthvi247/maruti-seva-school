@@ -5,9 +5,13 @@
   <meta charset="UTF-8">
   <title>Your Project - About</title>
   <link rel="stylesheet" href="../css/services.css">
+  <link rel="stylesheet" href="../components/header/header.css">
+  <link rel="stylesheet" href="../components/footer/footer.css">
 </head>
 
 <body>
+  <iframe src="../components/header/header.html"
+    onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
   <div>
     <p>Services Page scroll animation</p>
     <section>
@@ -45,9 +49,8 @@
     </section>
   </div>
   <!-- <iframe src="../components/footer.html"></iframe> -->
-  <iframe src="../components/footer.html" loading="lazy"
+  <iframe src="../components/footer/footer.html"
     onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
-
 </body>
 
 </html>
