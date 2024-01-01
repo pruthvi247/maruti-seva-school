@@ -39,3 +39,9 @@ https://www.shapedivider.app/
 - [text highlight](https://codepen.io/jlengstorf/pen/bGzBwRm)
 - [infinite-scroll](https://codepen.io/t_afif/pen/jOXRGGx)
 - [hero-section-grid](https://codepen.io/ecemgo/pen/GRzpEpB)
+
+#### about us
+
+- [our team] https://codepen.io/vetrisuriya/pen/QWqvMeE
+- [about us layout](https://codepen.io/harshit1112/pen/abaqaoq)
+- [our services](https://codepen.io/jaymar-g-aranas/pen/XWbavVY) -[our team](https://codepen.io/ecemgo/pen/zYmNdzX)

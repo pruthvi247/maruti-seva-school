@@ -1,3 +1,17 @@
+:root {
+  /* colors */
+  --clr-background: hsl(30, 40%, 98%);
+  --clr-txt-headings: hsl(220, 80%, 12%);
+  --clr-txt-body: hsl(220, 80%, 26%);
+  --clr-txt-highlight: hsl(0, 82%, 67%);
+  --clr-decoration: hsl(337, 80%, 61%);
+  --clr-gray-dark: hsl(263, 10%, 75%);
+  --clr-gray-light: hsl(0, 0%, 80%);
+  --main-background-color: hsl(337, 80%, 61%);
+  --main-border-color: hsl(63, 92%, 64%);
+  /* fonts families*/
+}
+
 /* ----------------------------- */
 /*  CSS Resets */
 /* ----------------------------- */
@@ -21,7 +35,7 @@ body {
 /* -------------------------------- */
 /* ---------- main content ---------*/
 /* -------------------------------- */
-/* >>>>>>>>>>>> hero section <<<<<<<<<<<< */
+/* >>>>>>>>>>>> hero section */
 @property --gradient-angle {
   syntax: "<angle>";
   initial-value: 0deg;
@@ -315,7 +329,8 @@ img {
     padding: 30px 40px;
   }
 }
-/* >>>>>>>>>>>> heroin section <<<<<<<<<<<< */
+/* hero section <<<<<<<<<<<< */
+/* >>>>>>>>>>>> founder-section  */
 /* Animation */
 @keyframes appear {
   from {
@@ -325,14 +340,84 @@ img {
     background-color: yellow;
   }
 }
-.home-page-section {
+founder-section {
+  padding: 140px 50px;
+  box-sizing: border-box;
+  animation: animate-in ease-in both;
+  margin: auto;
+  /* animation-timeline: view(); */
+  /* animation-range: entry 25% cover calc(50% - 10vh); */
+  animation-timeline: scroll();
+}
+.founder-section > h2 {
+  font-family: "Tilt Neon", sans-serif;
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+  line-height: 1;
+  margin-bottom: 30px;
+}
+.founder-section > p {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  /* margin-bottom: 30px; */
+}
+.founder-section > a {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+.founder-section img {
+  /* width: 50%; */
+  animation: appear linear;
+  animation-range: entry 0% entry 150%;
+  animation-timeline: view();
+  margin: auto;
+}
+/* text highlight */
+html {
+  color: oklch(0.2 0.19 84.89 / 1);
+}
+@keyframes highlight {
+  to {
+    background-position: 0;
+  }
+}
+mark {
+  animation: highlight linear forwards;
+  animation-timeline: view(60% 40%);
+  background: linear-gradient(
+    to right,
+    oklch(0.86 0.19 84.89 / 1) 50%,
+    oklch(0.86 0.19 84.89 / 0) 50%
+  );
+  background-position: 100%;
+  background-size: 200% 100%;
+  border-radius: 0.125rem;
+  padding-inline: 0.125rem;
+}
+/* founder-section <<<<<<<<<<<< */
+/* >>>>>>>>>>>> other sections */
+.home-page-section-flex {
   animation: animate-in ease-in both;
   /* animation-timeline: view(); */
   /* animation-range: entry 25% cover calc(50% - 10vh); */
   animation-timeline: scroll();
 }
-
-.home-page-section img {
+.home-page-section-container-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 130px 80px;
+}
+.home-page-section-content-flex {
+  background-color: azure;
+}
+.home-page-section-flex img {
+  /* width: 50%; */
+  flex-basis: 45%;
   animation: appear linear;
   animation-range: entry 0% entry 150%;
   animation-timeline: view();
@@ -346,16 +431,42 @@ html {
     background-position: 0;
   }
 }
-mark {
-  animation: highlight linear forwards;
-  animation-timeline: view(80% 20%);
-  background: linear-gradient(
-    to right,
-    oklch(0.86 0.19 84.89 / 1) 50%,
-    oklch(0.86 0.19 84.89 / 0) 50%
-  );
-  background-position: 100%;
-  background-size: 200% 100%;
-  border-radius: 0.125rem;
-  padding-inline: 0.125rem;
+/* other sections <<<<<<<<<<<< */
+/* >>>>>>>>>>>> santha */
+.progress {
+  position: fixed;
+  bottom: calc(100vh - 100%);
+  left: 0;
+  width: calc(100% - clamp(5rem, 200px, 10vw));
+  height: 0.5rem;
+  background: lightblue;
+  transform-origin: 0 50%;
+  animation: scaleProgress linear;
+  animation-timeline: scroll(root);
 }
+@keyframes scaleProgress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+.santa {
+  position: fixed;
+  bottom: calc(100vh - 100%);
+  left: 0;
+  width: clamp(5rem, 200px, 10vw);
+  animation: slide linear;
+  animation-timeline: scroll(root);
+}
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(100vw - 100%));
+  }
+}
+/* santha <<<<<<<<<<<< */
+/* other sections <<<<<<<<<<<< */

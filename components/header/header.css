@@ -3,7 +3,7 @@
 /* -------------------------------- */
 header {
   background-color: var(--clr-background);
-  background-color: peru;
+  /* background-color: peru; */
 
   display: flex;
   justify-content: space-between;
