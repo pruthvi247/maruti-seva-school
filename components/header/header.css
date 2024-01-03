@@ -4,6 +4,7 @@
 header {
   background-color: var(--clr-background);
   /* background-color: peru; */
+  background-color: rgb(169, 197, 239);
 
   display: flex;
   justify-content: space-between;

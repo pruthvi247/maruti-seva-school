@@ -432,6 +432,40 @@ html {
   }
 }
 /* other sections <<<<<<<<<<<< */
+/* >>>>>>>>>>>> other sections */
+.home-page-section-flex {
+  animation: animate-in ease-in both;
+  /* animation-timeline: view(); */
+  /* animation-range: entry 25% cover calc(50% - 10vh); */
+  animation-timeline: scroll();
+}
+.home-page-section-container-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 130px 80px;
+}
+.home-page-section-content-flex {
+  background-color: azure;
+}
+.home-page-section-flex img {
+  /* width: 50%; */
+  flex-basis: 45%;
+  animation: appear linear;
+  animation-range: entry 0% entry 150%;
+  animation-timeline: view();
+}
+/* text highlight */
+html {
+  color: oklch(0.2 0.19 84.89 / 1);
+}
+@keyframes highlight {
+  to {
+    background-position: 0;
+  }
+}
 /* >>>>>>>>>>>> santha */
 .progress {
   position: fixed;
