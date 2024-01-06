@@ -1,0 +1,40 @@
+.task-2.container {
+  display: grid;
+  height: 100vh;
+  font-size: 30px;
+
+  /* grid-template-columns: repeat(4, 1fr); */
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "header header header header"
+    "main main main main";
+  column-gap: 12px;
+
+  align-items: center;
+  background-color: aquamarine;
+}
+.task-2 .item-1 {
+  grid-area: header;
+  background-color: burlywood;
+}
+/* .task-2 .item-2 {
+  grid-area: header;
+}
+.task-2 .item-3 {
+  grid-area: header;
+}
+.task-2 .item-4 {
+  grid-area: header;
+}
+.task-2 .item-5 {
+  grid-area: main;
+}
+.task-2 .item-6 {
+  grid-area: main;
+}
+.task-2 .item-7 {
+  grid-area: main;
+}
+.task-2 .item-8 {
+  grid-area: main;
+} */
