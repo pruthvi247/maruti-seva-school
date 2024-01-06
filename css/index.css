@@ -433,7 +433,8 @@ article a::after {
 /* basic article elements styling */
 article h2 {
   margin: 0 0 18px 0;
-  font-family: "Bebas Neue", cursive;
+  /* font-family: "Bebas Neue", cursive; */
+  font-family: "Tilt Neon", sans-serif;
   font-size: 1.9rem;
   letter-spacing: 0.06em;
   color: var(--title-color);
@@ -455,6 +456,10 @@ article img {
 }
 .services-summary-article-body {
   padding: 24px;
+}
+.services-summary-article-body h2 {
+  font-size: 1.5rem;
+  font-family: "Courier New", Courier, monospace;
 }
 
 article a {
