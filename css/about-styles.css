@@ -220,16 +220,21 @@ html {
   }
 }
 @keyframes appear {
-  from {
-    opacity: 0.2;
-    scale: 0.8;
-    translate: 0 10%;
-    background-color: yellow;
+  10% {
+    opacity: 1;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 .text-media {
-  animation: animate-in ease-in both;
+  /* animation: animate-in ease-in both; */
+  animation: appear ease-in both;
   animation-timeline: view();
+  position: relative;
+  margin-top: 4%;
 }
 @keyframes animate-in {
   from {

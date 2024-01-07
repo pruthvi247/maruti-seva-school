@@ -4,11 +4,30 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+/* .footer-wrapper {
+  background-color: sandybrown;
+  position: relative;
+} */
+.services-section-wrapper {
+  /* background-color: sandybrown; */
+  /* position: absolute; */
+  bottom: 0;
+}
+.services-section-wrapper .services-section {
+  padding: 100px 0;
+}
+.main-div-wrapper {
+  display: flex;
+  /* position: relative; */
+  flex-direction: column;
+  bottom: 0;
+}
 section {
-  height: 100vh;
+  /* height: 100vh; */
   width: 100%;
   display: grid;
   place-items: center;
+  /* position: relative; */
 }
 .row {
   display: flex;
@@ -136,7 +155,9 @@ p {
   margin-right: -2rem;
   margin-left: 2rem;
 }
-/* jet-cloud background */
+
+/* ----------------------------------------- */
+/* jet-cloud background start */
 .progress {
   position: fixed;
   top: 3rem;
@@ -155,11 +176,11 @@ p {
 .cloud {
   width: 12vw;
   height: auto;
-  position: absolute;
+  position: relative;
   top: 5vh;
   left: 60vw;
-  /* fill: rgb(255 255 255 / 0.5); */
   fill: lightseagreen;
+  z-index: -1;
 }
 
 .cloud:nth-child(2n) {
@@ -180,3 +201,4 @@ p {
     offset-distance: 100%;
   }
 }
+/* jet-cloud background end */
