@@ -1,11 +1,16 @@
 /* -------------------------------- */
 /* ---------- Header ---------*/
 /* -------------------------------- */
+:root {
+  --clr-header-background: hsl(30, 40%, 98%);
+  --clr-header-hover: hsl(54, 31%, 46%);
+  --clr-txt-headings: hsl(204, 88%, 34%);
+  --clr-txt-body: hsl(220, 80%, 26%);
+  --clr-txt-highlight: hsl(0, 82%, 67%);
+  --ff-primary: "Barlow Semi Condensed", sans-serif;
+}
 header {
-  background-color: var(--clr-background);
-  /* background-color: peru; */
-  background-color: rgb(169, 197, 239);
-
+  background-color: var(--clr-header-background);
   display: flex;
   justify-content: space-between;
   /* align-items: absolute; */
@@ -20,11 +25,10 @@ header a {
 }
 .menu {
   display: flex;
-  /* background-color: green; */
   justify-content: space-between;
   align-items: center;
-  /* max-width: 250px; */
   margin-right: 2rem;
+  font-family: var(--ff-primary);
 }
 /* Hide hamburger for bigger screens */
 #menu-btn {
@@ -37,10 +41,29 @@ header a {
 }
 .nav-item {
   padding: 0.5rem;
+  color: var(--clr-txt-headings);
 }
 .nav-item:hover {
-  background-color: var(--main-hover-color);
-  background-color: plum;
+  background-color: var(--clr-header-hover);
+  border-radius: 0.5rem;
+  text-decoration: underline;
+}
+
+.nav-item:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.nav-item:hover:after {
+  width: 100%;
+  left: 0;
 }
 /* Set width for mobile/smaller screen size. */
 /* I set it big here so I don't have to shrink the screen so much */
@@ -59,7 +82,7 @@ header a {
 
   .menu a {
     text-decoration: none;
-    color: black;
+    /* color: black; */
   }
 
   .menu-btn {
@@ -79,7 +102,6 @@ header a {
   }
 
   .navicon {
-    background: #333;
     display: block;
     height: 2px;
     width: 18px;
@@ -112,16 +134,16 @@ header a {
     transition: max-height 0.2s ease-out;
     margin: 0;
     padding: 0;
-    background-color: #fff;
     display: flex;
     flex-direction: column;
     overflow: auto;
+    color: var(--clr-txt-headings);
   }
 
   .menu a {
     padding: 20px 20px;
-    border-right: 1px solid #f4f4f4;
-    background-color: #eee;
+    /* border-right: 1px solid #f4f4f4;
+    background-color: #eee; */
     width: 100%;
     text-align: center;
   }
