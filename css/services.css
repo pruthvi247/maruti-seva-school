@@ -70,6 +70,7 @@ p {
   height: 2.5em;
   width: 2.5em;
   color: #ffffff;
+  /* color: #ad3f3f; */
   border-radius: 50%;
   display: grid;
   place-items: center;
