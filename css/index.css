@@ -36,7 +36,6 @@
 */
 * {
   margin: 0;
-  padding: 2px;
   box-sizing: border-box;
 }
 
@@ -82,7 +81,8 @@ img {
     rgba(35, 36, 57, 1) 60%
   ); */
   overflow: hidden;
-  padding: 130px 80px;
+  padding: 10px 80px 140px 80px;
+  /* padding: 140px 80px; */
 }
 
 .description {
@@ -396,11 +396,13 @@ html {
 mark {
   animation: highlight linear forwards;
   animation-timeline: view(60% 40%);
-  background: linear-gradient(
+  /* background: linear-gradient(
     to right,
     oklch(0.86 0.19 84.89 / 1) 50%,
     oklch(0.86 0.19 84.89 / 0) 50%
-  );
+  ); */
+  text-decoration: underline;
+
   background-position: 100%;
   background-size: 200% 100%;
   border-radius: 0.125rem;
@@ -408,6 +410,16 @@ mark {
 }
 /* founder-section <<<<<<<<<<<< */
 /* >>>>>>>>>>>> services-summary-section */
+.services-section-container {
+  box-sizing: border-box;
+  padding-left: 80px;
+  padding-right: 80px;
+  animation: animate-in ease-in both;
+  margin: auto;
+  /* animation-timeline: view(); */
+  /* animation-range: entry 25% cover calc(50% - 10vh); */
+  animation-timeline: scroll();
+}
 article {
   --img-scale: 1.001;
   --title-color: black;
@@ -495,8 +507,8 @@ article:has(:hover, :focus) {
 
 .services-summary-section {
   display: grid;
-  padding-left: 80px;
-  padding-right: 80px;
+  /* padding-left: 80px;
+  padding-right: 80px; */
   /* grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-row: 1fr 1fr 1fr;
@@ -596,9 +608,15 @@ a:link {
   width: 100%;
   min-height: 100vh;
   background: #edf2f8;
+  background-image: url(../assets/images/testimonials-background.png);
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  background-clip: content-box;
+  padding-left: 80px;
+  padding-right: 80px;
 }
 .innerdiv {
   transform: scale(0.9);
