@@ -20,7 +20,7 @@ main {
   --timeline-width: 100%;
 
   position: relative;
-  padding-block: 300px;
+  /* padding-block: 300px; */
   max-width: 1000px;
   margin-inline: auto;
   &::before {
@@ -276,7 +276,10 @@ p {
     margin: 0.75rem 0 0;
   }
 }
-
+.awards-hero-section {
+  height: 90vh;
+  /* background-color: #689396; */
+}
 /* >>>>>>>>>>>>>>>>> Mouse scoll start */
 div.MouseScroll {
   /* position: absolute; */
@@ -284,9 +287,9 @@ div.MouseScroll {
   bottom: 25px;
   width: 100px;
   height: 100px;
-  margin: 0 0 0 -50px;
-
-  z-index: 2;
+  margin: 0 0 0 950px;
+  /* background-color: red; */
+  /* z-index: 2; */
 }
 path.MouseScroll--chevron {
   animation: ChevronAnimation 3s ease infinite;
@@ -337,12 +340,12 @@ path.MouseScroll--chevron {
 
 /* Hero section end <<<<<<<<<<<<<<< */
 
-img {
+/* img {
   width: 200px;
   margin-block-start: 1.05rem;
   border: 1px solid #eee;
   background: white;
-}
+} */
 
 /* Some mobile improvements I did after the demo was finished :) I know this could be done a bit more optimised if i'd done it right away */
 @media screen and (width <= 600px) {
@@ -380,7 +383,7 @@ img {
 body {
   font-family: Hepta Slab, sans-serif;
   font-weight: 500;
-  background: #efecdb;
+  /* background: #efecdb; */
   color: #5d4037;
 }
 * {
