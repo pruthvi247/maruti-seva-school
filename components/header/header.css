@@ -39,10 +39,54 @@ header a {
 .menu-icon {
   visibility: hidden;
 }
-.nav-item {
+.btn-style700 {
+  position: relative;
+  border-color: #979695;
+  color: #979695;
+  padding: 0.5rem;
+}
+.btn-style700::before,
+.btn-style700::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-color: #dd6395;
+  border-radius: 5px;
+  border-style: solid;
+  transition: all 0.35s;
+  content: "";
+  z-index: 1;
+}
+.btn-style700::before {
+  width: 0;
+  height: 100%;
+  border-width: 1px 0 1px 0;
+}
+.btn-style700::after {
+  width: 100%;
+  height: 0;
+  border-width: 0 1px 0 1px;
+}
+.btn-style700:hover {
+  border-color: #dd6395;
+  color: #dd6395;
+}
+.btn-style700:hover::before {
+  width: 100%;
+  border-width: 1px 0 1px 0;
+}
+.btn-style700:hover::after {
+  height: 100%;
+  border-width: 0 1px 0 1px;
+}
+.btn-style700:active {
+  border-color: #dd6395;
+  color: #dd6395;
+}
+/* .nav-item {
   padding: 0.5rem;
   color: var(--clr-txt-headings);
-}
+} 
 .nav-item:hover {
   background-color: var(--clr-header-hover);
   border-radius: 0.5rem;
@@ -64,7 +108,7 @@ header a {
 .nav-item:hover:after {
   width: 100%;
   left: 0;
-}
+} */
 /* Set width for mobile/smaller screen size. */
 /* I set it big here so I don't have to shrink the screen so much */
 /* for testing purposes */

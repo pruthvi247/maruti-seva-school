@@ -1,83 +1,30 @@
-/* >>>>>>>>>>>> other sections */
-
-/* .home-page-section-container-flex {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: 130px 80px;
-}
-.home-page-section-flex {
-  animation: animate-in ease-in both;
-  animation-timeline: scroll();
-}
-@keyframes appear {
-  from {
-    opacity: 0.2;
-    scale: 0.8;
-    translate: 0 10%;
-    background-color: yellow;
-  }
-}
-.home-page-section-content-flex {
-  background-color: azure;
-}
-.home-page-section-flex img {
-  flex-basis: 45%;
-  animation: appear linear;
-  animation-range: entry 0% entry 150%;
-  animation-timeline: view();
-} */
-/* text highlight */
-/* mark {
-  animation: highlight linear forwards;
-  animation-timeline: view(60% 40%);
-  background: linear-gradient(
-    to right,
-    oklch(0.86 0.19 84.89 / 1) 50%,
-    oklch(0.86 0.19 84.89 / 0) 50%
-  );
-  background-position: 100%;
-  background-size: 200% 100%;
-  border-radius: 0.125rem;
-  padding-inline: 0.125rem;
-}
-html {
-  color: oklch(0.2 0.19 84.89 / 1);
-}
-@keyframes highlight {
-  to {
-    background-position: 0;
-  }
-} */
-/* other sections <<<<<<<<<<<< */
-
-/* Vars */
-/* Reset */
 * {
+  margin: 0;
   box-sizing: border-box;
 }
-body {
-  font-family: "Work Sans", sans-serif;
-  margin: 0;
+/* -------------------------------- */
+/* ---------- main content ---------*/
+/* -------------------------------- */
+/* >>>>>>>>>>>> hero section */
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
 }
-@media (min-width: 720px) {
-  body {
-    font-size: 1.3rem;
-  }
-}
+
+/* html {
+  scroll-behavior: smooth;
+} */
 img {
   width: 100%;
   display: block;
+  pointer-events: none;
+  user-select: none;
 }
+
 h2 {
   margin: 0;
 }
-a {
-  color: rgba(21, 74, 235, 1);
-}
-/* Typography */
 h2 {
   font-size: 2rem;
   font-weight: 800;

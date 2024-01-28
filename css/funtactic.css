@@ -488,10 +488,7 @@ input:checked + span {
   }
 }
 /* >>>>>> home icon start */
-body {
-  padding: 50px;
-}
-
+/* codepen : https://codepen.io/jonamar/pen/nEyMzB */
 .arrow-n,
 .arrow-e,
 .arrow-s,
@@ -510,10 +507,23 @@ body {
   width: 0;
 }
 
-.arrow-n {
-  border-bottom: 1em solid #000;
+/* .arrow-n {
+  border-bottom: 1em solid #d9e3b1;
   bottom: 0.25em;
   -webkit-transition: 0.5s ease-in-out;
+}
+.arrow-n:hover {
+  -webkit-transform: rotate(90deg) scale(0.5, 1.1) translate(55%, -30%);
+  border-bottom-color: #fafafa;
+} */
+.arrow-n {
+  border-bottom: 1em solid #d9e3b1;
+  bottom: 0.25em;
+  -webkit-transition: 0.5s ease-in-out;
+}
+.arrow-n:hover {
+  -webkit-transform: rotate(90deg) scale(0.5, 1.1) translate(55%, -30%);
+  border-bottom-color: #fafafa;
 }
 
 .arrow-n:before,
@@ -527,19 +537,14 @@ body {
   height: 20px;
 }
 
-.arrow-n:before {
+.arrow-n:after {
   right: -50px;
 }
-.arrow-n:after {
+.arrow-n:before {
   left: -50px;
 }
 
-.arrow-n:hover {
-  -webkit-transform: rotate(90deg) scale(0.5, 1.1) translate(55%, -30%);
-  border-bottom-color: #fafafa;
-}
 .arrow-n:hover:before,
 .arrow-n:hover:after {
   display: none;
 }
-/* home icon end <<<<<<<<<< */

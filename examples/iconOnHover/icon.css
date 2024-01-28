@@ -1,0 +1,32 @@
+/* Define the default styles for the icon container */
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Define the default styles for the icon */
+.icon {
+  font-size: 50px; /* Adjust the size as needed */
+  color: #333; /* Adjust the color as needed */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Change the icon to home on hover */
+.icon:hover {
+  color: #00f; /* Change the color on hover */
+}
+
+/* Add styles for the play icon */
+.play-icon::before {
+  content: "\f04b"; /* Unicode for the play icon in FontAwesome */
+  font-family: "FontAwesome";
+}
+
+/* Add styles for the home icon */
+.home-icon::before {
+  content: "\f015"; /* Unicode for the home icon in FontAwesome */
+  font-family: "FontAwesome";
+}
