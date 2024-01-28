@@ -1,19 +1,53 @@
-/* -------------------------------- */
-/* ---------- Header ---------*/
-/* -------------------------------- */
+/*--------------------------
+	Some global flow defaults
+---------------------------*/
 :root {
   --clr-header-background: hsl(30, 40%, 98%);
-  --clr-header-hover: hsl(54, 31%, 46%);
+  --clr-header-hover: #dd6395;
+  --clr-logo: #64a4bb;
   --clr-txt-headings: hsl(204, 88%, 34%);
   --clr-txt-body: hsl(220, 80%, 26%);
   --clr-txt-highlight: hsl(0, 82%, 67%);
   --ff-primary: "Barlow Semi Condensed", sans-serif;
+  --font-size-menu: 1.75rem;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-block-size: 100%;
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: var(--clr-header-background);
+  color: var(--fg);
+}
+/* body {
+  width: 100%;
+  min-height: 300vh;
+  margin: 0;
+  background-size: 100%;
+  background-color: var(--clr-background);
+} */
+
+/* -------------------------------- */
+/* ---------- Header ---------*/
+/* -------------------------------- */
+body {
+  display: grid;
+  place-content: center;
+  gap: 5vmin;
+  padding: 5vmin;
 }
 header {
   background-color: var(--clr-header-background);
   display: flex;
   justify-content: space-between;
-  /* align-items: absolute; */
+  padding: 10px 80px 10px 80px;
   position: sticky;
   z-index: 99;
   top: 0;
@@ -27,7 +61,7 @@ header a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-right: 2rem;
+  margin-right: 0rem;
   font-family: var(--ff-primary);
 }
 /* Hide hamburger for bigger screens */
@@ -41,16 +75,17 @@ header a {
 }
 .btn-style700 {
   position: relative;
-  border-color: #979695;
-  color: #979695;
+  border-color: var(--clr-header-hover);
+  color: var(--clr-logo);
   padding: 0.5rem;
+  font-size: var(--font-size-menu);
 }
 .btn-style700::before,
 .btn-style700::after {
   position: absolute;
   top: 0;
   left: 0;
-  border-color: #dd6395;
+  border-color: var(--clr-header-hover);
   border-radius: 5px;
   border-style: solid;
   transition: all 0.35s;
@@ -68,8 +103,8 @@ header a {
   border-width: 0 1px 0 1px;
 }
 .btn-style700:hover {
-  border-color: #dd6395;
-  color: #dd6395;
+  border-color: var(--clr-header-hover);
+  color: var(--clr-header-hover);
 }
 .btn-style700:hover::before {
   width: 100%;
@@ -80,35 +115,9 @@ header a {
   border-width: 0 1px 0 1px;
 }
 .btn-style700:active {
-  border-color: #dd6395;
-  color: #dd6395;
+  border-color: var(--clr-header-hover);
+  color: var(--clr-header-hover);
 }
-/* .nav-item {
-  padding: 0.5rem;
-  color: var(--clr-txt-headings);
-} 
-.nav-item:hover {
-  background-color: var(--clr-header-hover);
-  border-radius: 0.5rem;
-  text-decoration: underline;
-}
-
-.nav-item:after {
-  background: none repeat scroll 0 0 transparent;
-  bottom: 0;
-  content: "";
-  display: block;
-  height: 2px;
-  left: 50%;
-  position: absolute;
-  background: #fff;
-  transition: width 0.3s ease 0s, left 0.3s ease 0s;
-  width: 0;
-}
-.nav-item:hover:after {
-  width: 100%;
-  left: 0;
-} */
 /* Set width for mobile/smaller screen size. */
 /* I set it big here so I don't have to shrink the screen so much */
 /* for testing purposes */
@@ -186,8 +195,6 @@ header a {
 
   .menu a {
     padding: 20px 20px;
-    /* border-right: 1px solid #f4f4f4;
-    background-color: #eee; */
     width: 100%;
     text-align: center;
   }
