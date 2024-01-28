@@ -119,7 +119,7 @@ p:last-of-type {
   }
 }
 .text-media--no-bg {
-  --pt: 0;
+  /* --pt: 0; */
   background-color: transparent;
 }
 .text-media--no-bg.text-media--narrow {
@@ -182,7 +182,6 @@ html {
   animation: appear ease-in both;
   animation-timeline: view();
   position: relative;
-  margin-top: 4%;
 }
 @keyframes animate-in {
   from {
@@ -192,5 +191,5 @@ html {
   }
 }
 .main-div-wrapper {
-  padding: 4%;
+  padding: 0 4%;
 }

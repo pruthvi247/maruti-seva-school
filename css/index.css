@@ -562,7 +562,7 @@ a:link {
   padding-right: 80px;
 }
 .innerdiv {
-  transform: scale(0.9);
+  transform: scale(1.2);
   margin: 1rem;
   display: grid;
   grid-gap: 1.5rem;
