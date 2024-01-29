@@ -22,7 +22,7 @@
 
   --ff-primary: "Barlow Semi Condensed", sans-serif;
 
-  --fw-500: 500;
+  /* --fw-500: 500;
   --fw-600: 600;
   --fs-80: 0.8rem;
   --fs-100: 1rem;
@@ -33,7 +33,18 @@
   --fs-500-lh: 1;
   --fs-300-lh: 1.5;
 
-  --ff-ls-100: 0.06em;
+  --ff-ls-100: 0.06em; */
+  --fw-500: 500;
+  --fw-600: 600;
+  --fs-80: 0.6rem;
+  --fs-100: 0.8rem;
+  --fs-300: 1rem;
+  --fs-350: 1.2rem;
+  --fs-400: clamp(1.2rem, 3.3vw, 2.3rem);
+  --fs-500: clamp(2.1rem, 3vw, 2rem);
+  --fs-500-lh: 0.8;
+  --fs-300-lh: 1.3;
+  --ff-ls-100: 0.04em;
 }
 
 html {
