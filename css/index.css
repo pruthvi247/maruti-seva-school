@@ -13,7 +13,6 @@
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   --clr-btn-box-shadow: 0.3em 0.3em 0 #dd6395;
   --clr-btn-box-hover: -0.3em -0.3em 0 #979695;
-  --clr-link: hsl(217, 90%, 50%);
   --clr-transparent: transparent;
 
   --img-scale: 1.001;
@@ -22,18 +21,6 @@
 
   --ff-primary: "Barlow Semi Condensed", sans-serif;
 
-  /* --fw-500: 500;
-  --fw-600: 600;
-  --fs-80: 0.8rem;
-  --fs-100: 1rem;
-  --fs-300: 1.2rem;
-  --fs-350: 1.5rem;
-  --fs-400: clamp(1.5rem, 3.5vw, 2.5rem);
-  --fs-500: clamp(2.3rem, 5vw, 4rem);
-  --fs-500-lh: 1;
-  --fs-300-lh: 1.5;
-
-  --ff-ls-100: 0.06em; */
   --fw-500: 500;
   --fw-600: 600;
   --fs-80: 0.6rem;
@@ -59,13 +46,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
 }
-/* ----------------------------- */
-/*  CSS Resets */
-/* ----------------------------- */
 
-/*
-  2. Remove default margin
-*/
 * {
   margin: 0;
   box-sizing: border-box;
@@ -85,6 +66,19 @@ p {
   color: var(--clr-txt-body);
   font-family: var(--ff-primary);
 }
+
+/* --fw-500: 500;
+  --fw-600: 600;
+  --fs-80: 0.8rem;
+  --fs-100: 1rem;
+  --fs-300: 1.2rem;
+  --fs-350: 1.5rem;
+  --fs-400: clamp(1.5rem, 3.5vw, 2.5rem);
+  --fs-500: clamp(2.3rem, 5vw, 4rem);
+  --fs-500-lh: 1;
+  --fs-300-lh: 1.5;
+
+  --ff-ls-100: 0.06em; */
 
 /* -------------------------------- */
 /* ---------- main content ---------*/
@@ -573,7 +567,7 @@ a:link {
   padding-right: 80px;
 }
 .innerdiv {
-  transform: scale(1.2);
+  transform: scale(0.9);
   margin: 1rem;
   display: grid;
   grid-gap: 1.5rem;

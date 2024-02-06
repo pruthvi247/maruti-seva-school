@@ -10,6 +10,7 @@
   --clr-txt-highlight: hsl(0, 82%, 67%);
   --ff-primary: "Barlow Semi Condensed", sans-serif;
   --font-size-menu: 1.5rem;
+  --clr-link: #64a4bb;
 }
 *,
 *::before,
@@ -18,14 +19,19 @@
   margin: 0;
   padding: 0;
 }
+a:link {
+  text-decoration: none;
+  color: var(--clr-link);
+  font-family: var(--ff-primary);
+}
 
-body {
+/* body {
   min-block-size: 100%;
   font-size: 1rem;
   font-weight: 400;
   background-color: var(--clr-header-background);
   color: var(--fg);
-}
+} */
 /* body {
   width: 100%;
   min-height: 300vh;
@@ -37,12 +43,12 @@ body {
 /* -------------------------------- */
 /* ---------- Header ---------*/
 /* -------------------------------- */
-body {
+/* body {
   display: grid;
   place-content: center;
   gap: 5vmin;
   padding: 5vmin;
-}
+} */
 header {
   background-color: var(--clr-header-background);
   display: flex;
@@ -76,7 +82,7 @@ header a {
 .btn-style700 {
   position: relative;
   border-color: var(--clr-header-hover);
-  color: var(--clr-logo);
+  color: var(--clr-link);
   padding: 0.5rem;
   font-size: var(--font-size-menu);
 }
