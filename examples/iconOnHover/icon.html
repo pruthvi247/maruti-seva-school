@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Define the default styles for the icon container */
+    .icon-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* Define the default styles for the icon */
+    .icon {
+      position: relative;
+      width: 50px;
+      /* Adjust the size as needed */
+      height: 50px;
+      /* Adjust the size as needed */
+      cursor: pointer;
+    }
+
+    /* Create the play icon */
+    .icon::before,
+    .icon::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+
+    .icon::before {
+      border-width: 15px 0 15px 25px;
+      border-color: transparent transparent transparent #00f;
+      /* Adjust the color as needed */
+    }
+
+    .icon::after {
+      border-width: 15px 25px 15px 0;
+      border-color: transparent #00f transparent transparent;
+      /* Adjust the color as needed */
+    }
+
+    /* Change the icon to home on hover */
+    .icon:hover::before,
+    .icon:hover::after {
+      border-color: transparent transparent transparent #333;
+      /* Change the color on hover */
+    }
+
+    /* Add styles for the home icon */
+    .icon:hover.home::before,
+    .icon:hover.home::after {
+      border-color: transparent transparent transparent #00f;
+      /* Adjust the color as needed */
+    }
+  </style>
+  <title>Icon Change on Hover</title>
+</head>
+
+<body>
+
+  <div class="icon-container">
+    <div class="icon"></div>
+  </div>
+
+</body>
+
+</html>
